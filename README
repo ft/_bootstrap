@@ -1,0 +1,16 @@
+Quickstart for pulling dotfiles onto a new machine:
+
+    % mkdir ~/etc
+    % cd ~/etc
+    % git clone git://some.where.tld/repos/_bootstrap.git
+    % cd _bootstrap
+    % ./bootstrap.sh yes_please
+    % ./get_repos.sh core editors
+    % cd ..
+    % make deploy
+
+This assumes, that a recent version of `dewi' is installed on the
+system (yes, it must be available via $PATH). Access to a server
+carrying the required dotfile repositories is needed as well. If
+it is a non-default URI, the environment variable $REPO_ROOT_URI
+must be set appropriately.
