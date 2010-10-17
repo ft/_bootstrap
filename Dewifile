@@ -1,0 +1,26 @@
+#!/usr/bin/perl
+#set_opt('debug',   'true');
+#set_opt('dryrun',  'true');
+set_opt('verbose', 'true');
+
+my ($dewi_root);
+
+if (defined $ENV{DEWI_ROOT}) {
+    $dewi_root = $ENV{DEWI_ROOT};
+} else {
+    $dewi_root = $ENV{HOME} . '/etc';
+}
+
+register( { glob        => 'cfg/*',
+            post_glob   => sub {
+                return remove_hashes( remove_tilde(@_) ); },
+            destination => $dewi_root . '/.dewi',
+            method      => 'force_copy' } );
+
+register( { glob        => 'addons/*',
+            post_glob   => sub {
+                return remove_hashes( remove_tilde(@_) ); },
+            destination => $dewi_root . '/.dewi/addons',
+            method      => 'force_copy' } );
+
+end();
