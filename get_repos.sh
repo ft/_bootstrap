@@ -16,6 +16,8 @@
 #
 #  Multiple categories may be given at once.
 
+REPO_ROOT_URI=${REPO_ROOT_URI:-git://git.0x50.de/ft/dotfiles/}
+
 if [ $# -lt 1 ]; then
     printf 'usage: get_repos.sh <CATEGORY/IES...>\n'
     exit 1
