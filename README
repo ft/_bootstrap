@@ -2,7 +2,7 @@ Quickstart for pulling dotfiles onto a new machine:
 
     % mkdir ~/etc
     % cd ~/etc
-    % git clone git://some.where.tld/repos/_bootstrap.git
+    % git clone git://github.com/ft/_bootstrap.git
     % cd _bootstrap
     % ./bootstrap.sh yes_please
     % ./get_repos.pl 0x50.de core editors
