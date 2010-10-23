@@ -5,7 +5,7 @@ Quickstart for pulling dotfiles onto a new machine:
     % git clone git://some.where.tld/repos/_bootstrap.git
     % cd _bootstrap
     % ./bootstrap.sh yes_please
-    % ./get_repos.sh core editors
+    % ./get_repos.pl 0x50.de core editors
     % cd ..
     % make deploy
 
