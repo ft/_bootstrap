@@ -10,7 +10,23 @@ Quickstart for pulling dotfiles onto a new machine:
     % make deploy
 
 This assumes, that a recent version of `dewi' is installed on the
-system (yes, it must be available via $PATH). Access to a server
-carrying the required dotfile repositories is needed as well. If
-it is a non-default URI, the environment variable $REPO_ROOT_URI
-must be set appropriately.
+system (yes, it must be available via $PATH).
+
+
+Dewi?
+
+If you don't know what `dewi' is: it's a framework that helps deploying
+personal personal configuration files from a central place to the proper
+locations in the user's home directory.
+
+Here's a quickstart to get it working (make *sure* you got `txt2tags'
+installed on the system - or the documentation will not be generated
+properly. Don't bother whining about problems without having dewi's
+documentation available.):
+
+    % mkdir ~/src
+    % cd ~/src
+    % git clone git://github.com/ft/dewi.git
+    % cd dewi
+    % make sys doc
+    % sudo make install
