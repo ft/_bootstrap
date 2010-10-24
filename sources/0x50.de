@@ -1,1 +1,5 @@
+emacs   http://git.0x50.de/ftemacs.git
+screen  http://git.0x50.de/ftscreen.git
+tmux    http://git.0x50.de/fttmux.git
+vim     http://git.0x50.de/ftvim.git
 zsh     http://git.0x50.de/ftzsh.git
