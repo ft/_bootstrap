@@ -124,12 +124,18 @@ sub read_sources {
     }
 }
 
+sub updir {
+    chdir '..' or die "Couldn't change to updir (..). Giving up.\n";
+}
+
 sub usage {
     print "usage: get_repos.pl [-ls|-lc] <source-server> <categor{y,ies}>\n\n";
     print "  Options:\n";
     print "      -h         this help message\n";
     print "      -lc        list possible categories\n";
     print "      -ls        list available sources\n\n";
+    print "  If `_all_' is used as the *only* category, all\n";
+    print "  repositories from a server are cloned.\n\n";
 }
 
 if ($#ARGV < 0) {
@@ -153,19 +159,25 @@ if ($#ARGV < 1) {
     exit 1;
 }
 
-read_cats();
-read_sources();
-
 $src = $ARGV[0];
 shift;
-
+read_sources();
 if (!defined $sources{$src}) {
     die "`$src' is *not* a valid source (try \"get_repos.pl -ls\").\n";
 }
 
-chdir '..' or die "Couldn't change to updir (..). Giving up.\n";
-foreach my $cat (@ARGV) {
-    foreach my $repo (@{ $cats{$cat} }) {
+if ($#ARGV > 0 || ($#ARGV == 0 && $ARGV[0] ne '_all_')) {
+    read_cats();
+    updir();
+    foreach my $cat (@ARGV) {
+        foreach my $repo (@{ $cats{$cat} }) {
+            get_repo($src, $repo);
+        }
+    }
+} else {
+    # _all_ from a source.
+    updir();
+    foreach my $repo (sort keys %{ $sources{$src} }) {
         get_repo($src, $repo);
     }
 }
