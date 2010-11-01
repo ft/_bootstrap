@@ -168,6 +168,21 @@ if (!defined $sources{$src}) {
 
 if ($#ARGV > 0 || ($#ARGV == 0 && $ARGV[0] ne '_all_')) {
     read_cats();
+    my ($ok);
+    $ok = 1;
+    foreach my $cat (@ARGV) {
+        if ($cat eq '_all_') {
+            $ok = 0;
+            print "`_all_' *only* works as the sole category argument.\n";
+        } elsif (! -e "lists/$cat") {
+            $ok = 0;
+            print "`$cat' is not a valid category.\n";
+        }
+    }
+    if (!$ok) {
+        print "\nUnknown categories, giving up.\n";
+        exit 1;
+    }
     updir();
     foreach my $cat (@ARGV) {
         foreach my $repo (@{ $cats{$cat} }) {
