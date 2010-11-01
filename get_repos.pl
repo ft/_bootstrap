@@ -31,6 +31,15 @@ use strict;
 
 my ($src, %cats, %sources);
 
+sub __comment_or_empty {
+    my ($line) = @_;
+
+    if ($line =~ m/^\s*$/ || $line =~ m/^\s*#/) {
+        return 1;
+    }
+    return 0;
+}
+
 sub fill_cat {
     my ($cat) = @_;
     my ($fh);
@@ -38,6 +47,7 @@ sub fill_cat {
     open $fh, '<', "lists/$cat" or die "Couldn't open `lists/$cat': $!\n";
     while (my $line = <$fh>) {
         chomp $line;
+        next if (__comment_or_empty($line));
         push @{ $cats{$cat} }, $line;
     }
     close $fh;
@@ -50,6 +60,7 @@ sub fill_source {
     open $fh, '<', "sources/$src" or die "Couldn't open `sources/$src': $!\n";
     while (my $line = <$fh>) {
         chomp $line;
+        next if (__comment_or_empty($line));
         my ($name, $repo) = $line =~ m/^(\w+)\s+(.*)/;
         $sources{$src}{$name} = $repo;
     }
