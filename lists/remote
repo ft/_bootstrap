@@ -1,3 +1,6 @@
+# This is a set of configuration files suitable for normal machines with
+# remote access.
+
 emacs
 git
 lftp
