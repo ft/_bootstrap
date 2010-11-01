@@ -143,7 +143,7 @@ if ($ARGV[0] eq '-ls') {
 } elsif ($ARGV[0] eq '-lc') {
     list_categories();
     exit 0;
-} elsif ($ARGV[0] eq '-') {
+} elsif ($ARGV[0] eq '-h') {
     usage();
     exit 0;
 }
