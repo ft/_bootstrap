@@ -6,5 +6,6 @@
 #set_opt('verbose', 'true');
 
 read_dewifile($DEWI{DOT_DEWI} . "/addons/simple-filter");
+read_dewifile($DEWI{DOT_DEWI} . "/addons/nuke-deadlinks");
 
 end();
