@@ -4,7 +4,7 @@
 
 #set_opt('debug',   'true');
 #set_opt('dryrun',  'true');
-set_opt('verbose', 'true');
+#set_opt('verbose', 'true');
 
 my ($dewi_root);
 
