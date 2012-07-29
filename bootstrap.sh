@@ -31,7 +31,7 @@
 #  available with the least possible hassle. The different setup
 #  files are available via VCS. Deployment is done using `dewi'.
 #  This script is used to initialise a root directory and import
-#  my costum changes to the `.dewi' directory.
+#  my custom changes to the `.dewi' directory.
 #
 #  Then there's another script `get_repos.sh', which gets a set of
 #  repositories from the internet and puts the checkouts into the
