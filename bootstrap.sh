@@ -1,5 +1,5 @@
 #!/bin/sh
-## Copyright 2010
+## Copyright (c) 2010-2012
 ## Frank Terbeck <ft@bewatermyfriend.org>, All rights reserved.
 ##
 ## Redistribution and use in source and binary forms, with or without
