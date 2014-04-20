@@ -56,5 +56,5 @@ command dewi init
     DEWI_ROOT="$dir"
     export DEWI_ROOT
     cd "$olddir"
-    command make deploy
+    command dewi deploy
 )
