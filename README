@@ -4,6 +4,7 @@ Quickstart for pulling dotfiles onto a new machine:
     % cd ~/etc
     % git clone git://github.com/ft/_bootstrap.git
     % cd _bootstrap
+    % ./get_dewi.sh yes_please
     % ./bootstrap.sh yes_please
     % ./get_repos.pl 0x50.de core editors
     % cd ..
@@ -17,16 +18,7 @@ Dewi?
 
 If you don't know what `dewi' is: it's a framework that helps deploying
 personal personal configuration files from a central place to the proper
-locations in the user's home directory.
+locations in the user's home directory. The ‘get_dewi.sh’ step in the
+quickstart pulls dewi onto the system. It is available from:
 
-Here's a quickstart to get it working (make *sure* you got `txt2tags'
-installed on the system - or the documentation will not be generated
-properly. Don't bother whining about problems without having dewi's
-documentation available.):
-
-    % mkdir ~/src
-    % cd ~/src
-    % git clone git://github.com/ft/dewi.git
-    % cd dewi
-    % make sys doc
-    % sudo make install
+  https://github.com/ft/dewi
