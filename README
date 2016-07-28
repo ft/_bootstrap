@@ -8,7 +8,7 @@ Quickstart for pulling dotfiles onto a new machine:
     % ./bootstrap.sh yes_please
     % ./get_repos.pl 0x50.de core editors
     % cd ..
-    % make deploy
+    % dewi deploy
 
 This assumes, that a recent version of `dewi' is installed on the
 system (yes, it must be available via $PATH).
