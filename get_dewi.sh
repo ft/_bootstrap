@@ -122,15 +122,6 @@ clone_dewi_git () {
     if [ "$_ans" = r ]; then
         git clone "$url" dewi || exit 1
     fi
-    # The next few lines are required until the dewi's "onward" branch is
-    # merged into its "master" branch.
-    save_cd "dewi"
-    branch=$(cat .git/HEAD)
-    case "$branch" in
-    */onward) printf ' -!- Repository: Already on branch "onward"!\n' ;;
-    *) printf ' -!- Repository: Checking out "onward" branch!\n'
-       git checkout -b onward origin/onward || exit 1 ;;
-    esac
     save_cd "$_old_pwd"
 }
 
