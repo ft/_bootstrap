@@ -14,15 +14,8 @@ if (defined $ENV{DEWI_ROOT}) {
 }
 
 register { glob        => 'cfg/*',
-           post_glob   =>
-               sub { return remove_hashes(remove_tilde(@_)) },
+           post_glob   => sub { return remove_hashes(remove_tilde(@_)) },
            destination => $dewi_root . '/.dewi',
-           method      => 'force_copy' };
-
-register { glob        => 'addons/*',
-           post_glob   =>
-               sub { return remove_hashes(remove_tilde(@_)) },
-           destination => $dewi_root . '/.dewi/addons',
            method      => 'force_copy' };
 
 end
