@@ -1,2 +1,3 @@
+# -*- cperl -*-
 set_opt 'default-root-directory', '~/etc';
 end;
