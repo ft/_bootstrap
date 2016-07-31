@@ -5,6 +5,11 @@
 #set_opt 'dryrun',  'true';
 set_opt 'verbose', 'true';
 
+if (callsite() ne q{subdirectory}) {
+    early_exit "_bootstrap is only meant to be deployed from its package directory.",
+               "This is to avoid overriding changes in .dewi/Dewifile.";
+}
+
 my ($dewi_root);
 
 if (defined $ENV{DEWI_ROOT}) {
