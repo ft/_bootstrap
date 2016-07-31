@@ -23,4 +23,6 @@ register { glob        => 'cfg/*',
            destination => $dewi_root . '/.dewi',
            method      => 'force_copy' };
 
+register 'dewirc';
+
 end
