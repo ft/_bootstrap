@@ -127,7 +127,7 @@ clone_dewi_git () {
 
 install_optionals () {
     printf ' -!- Installing optional dependencies:\n'
-    for i in txt2tags libipc-run3-perl libtemplate-perl; do
+    for i in pandoc libipc-run3-perl libtemplate-perl; do
         as_root apt-get install "$i"
     done
 }
