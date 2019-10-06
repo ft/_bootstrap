@@ -2,10 +2,12 @@
 # remote access.
 
 emacs
+ghc
 git
 lftp
-screen
 tmux
 vim
 w3m
+x11
+xmonad
 zsh
