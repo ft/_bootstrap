@@ -5,6 +5,7 @@ ghc         https://gitlab.com/ft/etc-ghc.git
 git         https://gitlab.com/ft/etc-git.git
 guile       https://gitlab.com/ft/etc-guile.git
 guix        https://gitlab.com/ft/etc-guix.git
+gnu-toolchain https://gitlab.com/ft/etc-gnu-toolchain.git
 lftp        https://gitlab.com/ft/etc-lftp.git
 mutt        https://gitlab.com/ft/etc-mutt.git
 screen      https://gitlab.com/ft/etc-screen.git
