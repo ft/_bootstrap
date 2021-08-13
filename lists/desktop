@@ -1,5 +1,6 @@
-fvwm
-luakit
-wyrd
+emacs
 x11
 xmonad
+tmux
+vim
+zsh

@@ -4,6 +4,8 @@
 emacs
 ghc
 git
+gnu-toolchain
+guile
 lftp
 tmux
 vim
